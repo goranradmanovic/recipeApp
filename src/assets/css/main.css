@@ -1,0 +1,166 @@
+@import './base.css';
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+main {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+
+.card {
+	display: flex;
+	width: 60%;
+	height: 600px;
+	border-radius: 1rem;
+	overflow: hidden;
+	color: #333;
+	background-color: white;
+}
+
+.card__img {
+	width: 352px;
+	object-fit: fill;
+}
+
+.card__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10px;
+}
+
+.card__info__header, .card__info__body {
+	width: 100%;
+}
+
+.card__info__title {
+	padding-left: 20px;
+	padding-bottom: 20px;
+	font-weight: 400;
+}
+
+.card__info__ingrediens {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	min-height: 140px;
+	max-height: 140px;
+	overflow-y: scroll;
+}
+
+.card__info__ingrediens li {
+	width: 50%;
+	font-size: .9rem;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.card__info__subtitle {
+	padding-block: 14px;
+	padding-left: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.card__info__instructions {
+	min-height: 260px;
+	max-height: 260px;
+	overflow-y: scroll;
+}
+
+.card__info__instructions li {
+	padding-bottom: 6px;
+	font-size: .9rem;
+	line-height: 1;
+}
+
+.card__info__btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 14px;
+}
+
+.card__info__btns button {
+	margin-right: 5px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.card__info__btns button {
+	margin-right: 6px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.card__info__btns button svg {
+	fill: #333;
+}
+
+.card__info__btns button:hover .rotate {
+	fill: green;
+	rotate: 360deg;
+	transition: rotate 1s, fill 1s;
+}
+
+.card__info__btns button:hover .fav {
+	fill: crimson;
+	transition: fill 1s;
+}
+
+.card__info__btns button:hover .prev {
+	fill: goldenrod;
+	transition: fill 1s;
+}
+
+.card__info__btns__links a,
+.card__info__btns__links span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 8px;
+	fill: #333;
+}
+
+.card__info__btns__links a.source svg {
+	stroke: #333;
+}
+
+.card__info__btns__links a.source:hover svg {
+	stroke: steelblue;
+	transition: stroke .4s;
+}
+
+.card__info__btns__links a.youtube:hover svg {
+	fill: red;
+	transition: fill 1s;
+}
+
+/*
+.card__info__btns__links span {
+	margin-right: 0;
+	font-size: .6rem;
+}
+*/
